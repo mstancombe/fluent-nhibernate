@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{83F176
 	ProjectSection(SolutionItems) = preProject
 		CONTRIBUTORS - READ ME!.txt = CONTRIBUTORS - READ ME!.txt
 		FluentKey.snk = FluentKey.snk
+		.nuget\NuGet.Config = .nuget\NuGet.Config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentNHibernate", "FluentNHibernate\FluentNHibernate.csproj", "{529145D5-6CC3-4016-89B5-826563024AF1}"
