@@ -89,15 +89,17 @@ namespace FluentNHibernate
 
         private static Assembly FindTheCallingAssembly()
         {
-            StackTrace trace = new StackTrace(Thread.CurrentThread, false);
+            //Get a stack trace.  We'll use this to find the calling assembly by finding the first stack frame which is 
+            //NOT owned by FNH assembly.
+            StackTrace trace = new StackTrace();
 
-            Assembly thisAssembly = Assembly.GetExecutingAssembly();
+            Assembly fnhAssembly = Assembly.GetExecutingAssembly();
             Assembly callingAssembly = null;
             for (int i = 0; i < trace.FrameCount; i++)
             {
                 StackFrame frame = trace.GetFrame(i);
                 Assembly assembly = frame.GetMethod().DeclaringType.Assembly;
-                if (assembly != thisAssembly)
+                if (assembly != fnhAssembly)
                 {
                     callingAssembly = assembly;
                     break;
