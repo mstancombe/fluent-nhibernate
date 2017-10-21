@@ -7,7 +7,7 @@ namespace FluentNHibernate.Cfg.Db
     {
         protected MsSqlConfiguration()
         {
-            Driver<SqlClientDriver>();
+            Driver<SqlServerDriver>();
         }
 
         public static MsSqlConfiguration MsSql7
