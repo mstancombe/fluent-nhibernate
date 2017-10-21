@@ -23,3 +23,5 @@ build
 
 *.swp
 TestResult.xml
+
+.vs
